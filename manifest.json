@@ -1,0 +1,10 @@
+{
+    "name": "SpyderCode",
+    "short_name": "Code",
+    "theme_color": "#001f65",
+    "background_color": "#002f06",
+    "display": "fullscreen",
+    "orientation": "landscape",
+    "scope": "/SpyderCode",
+    "start_url": "/SpyderCode"
+}

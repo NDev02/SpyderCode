@@ -9,6 +9,7 @@ html,body {
     margin: 0;
     padding: 0px;
     overflow: hidden;
+    position: fixed;
     background: var(--bg);
     color: var(--fg);
 }

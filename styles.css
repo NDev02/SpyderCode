@@ -1,6 +1,7 @@
 :root {
     --bg: rgba(0,0,0,0);
     --fg: rgba(0,0,0,0);
+    position: fixed;
 }
 
 html,body {
@@ -9,7 +10,6 @@ html,body {
     margin: 0;
     padding: 0px;
     overflow: hidden;
-    position: fixed;
     background: var(--bg);
     color: var(--fg);
 }

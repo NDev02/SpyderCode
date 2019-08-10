@@ -1,7 +1,9 @@
 :root {
+    --bg-lighter: rgba(0,0,0,0);
     --bg: rgba(0,0,0,0);
     --fg: rgba(0,0,0,0);
     position: fixed;
+    font-family: sans-serif;
 }
 
 html,body {
@@ -24,6 +26,58 @@ html,body {
 
 .application .top {
     background: rgba(0,0,0,0.1);
+}
+
+.application .top .toolbar {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+
+.application .top .toolbar .tool {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    padding: 0.5em 0.5em 1em 0.5em;
+    position: relative;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+
+.application .top .toolbar .tool:hover {
+    background: var(--bg-lighter);
+}
+
+.application .top .toolbar .tool .menu {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    display: none;
+    list-style: none;
+    background: var(--bg-lighter);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 250px;
+    padding: 0px;
+    cursor: default;
+}
+
+.application .top .toolbar .tool .menu li {
+    padding: 0.5em;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.application .top .toolbar .tool .menu li:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+.application .top .toolbar .tool .menu hr {
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+.application .top .toolbar .tool:hover .menu {
+    display: block;
 }
 
 .application .middle {

@@ -55,8 +55,16 @@ function setTheme(themeName) {
 
 function updateTheme() {
     // Saves theme information to the style sheet for the application
+    document.querySelector(":root").style.setProperty("--bg-lighter", lighten(application.currentTheme["editor.background"], 30));
     document.querySelector(":root").style.setProperty("--bg", application.currentTheme["editor.background"].toString());
     document.querySelector(":root").style.setProperty("--fg", application.currentTheme["editor.foreground"].toString());
+}
+
+function lighten(c, amt) {
+    let r = c.rgba.r + amt;
+    let g = c.rgba.g + amt;
+    let b = c.rgba.b + amt;
+    return `rgba(${r}, ${g}, ${b}, ${c.rgba.a})`;
 }
 
 function defineThemes() {
